@@ -1,2 +1,2 @@
-# Semana OmniStack 10
+# DevRadar
  Semana OmniStack 10 - Rocketseat
