@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const routes = require("./routes");
 const secrets = require("./.env");
 
@@ -14,6 +15,8 @@ mongoose.connect(
   }
 );
 
+app.use(cors({ origin: "http://localhost:3000" }));
+//app.use(cors()); // para liberar o acesso externo para todo o tipo de aplicação
 app.use(express.json());
 app.use(routes);
 
