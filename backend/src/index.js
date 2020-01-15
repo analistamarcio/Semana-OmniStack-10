@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
-const secrets = require("../src/config/Database");
+const secrets = require("./.env");
 
 const app = express();
 
