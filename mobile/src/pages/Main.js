@@ -180,7 +180,7 @@ function Main({ navigation }) {
               onPress={() => {
                 // navegação
                 navigation.navigate("Profile", {
-                  githubUsername: dev.githubUsername
+                  github_username: dev.github_username
                 });
               }}
             >
