@@ -5,7 +5,7 @@ const DevSchema = new mongoose.Schema({
   name: String,
   githubUsername: String,
   bio: String,
-  avatarUrl: String,
+  avatar_url: String,
   techs: [String],
   location: {
     type: PointSchema,

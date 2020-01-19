@@ -173,7 +173,7 @@ function Main({ navigation }) {
             <Image
               style={styles.avatar}
               source={{
-                uri: dev.avatarUrl
+                uri: dev.avatar_url
               }}
             />
             <Callout
