@@ -13,16 +13,16 @@ module.exports = {
   },
 
   async store(request, response) {
-    const { github_username, techs, latitude, longitude } = request.body;
+    const { githubUsername, techs, latitude, longitude } = request.body;
 
-    let dev = await Dev.findOne({ github_username });
+    let dev = await Dev.findOne({ githubUsername });
 
     if (!dev) {
       const apiResponse = await axios.get(
-        `https://api.github.com/users/${github_username}`
+        `https://api.github.com/users/${githubUsername}`
       );
 
-      const { name = login, avatar_url, bio } = apiResponse.data;
+      const { name = login, avatarUrl, bio } = apiResponse.data;
 
       const techsArray = parseStringAsArray(techs);
 
@@ -32,9 +32,9 @@ module.exports = {
       };
 
       dev = await Dev.create({
-        github_username,
+        githubUsername,
         name,
-        avatar_url,
+        avatarUrl,
         bio,
         techs: techsArray,
         location

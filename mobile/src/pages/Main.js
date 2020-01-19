@@ -83,6 +83,76 @@ function Main({ navigation }) {
     return null;
   }
 
+  const styles = StyleSheet.create({
+    map: {
+      flex: 1
+    },
+
+    avatar: {
+      width: 54,
+      height: 54,
+      borderRadius: 2,
+      borderWidth: 2,
+      borderColor: "#7d40e7"
+    },
+
+    callout: {
+      width: 260
+    },
+
+    devName: {
+      fontWeight: "bold",
+      fontSize: 16
+    },
+
+    devBio: {
+      color: "#666",
+      marginTop: 5
+    },
+
+    devTechs: {
+      marginTop: 5
+    },
+
+    searchForm: {
+      position: "absolute",
+      top: 20,
+      left: 20,
+      right: 20,
+      zIndex: 5,
+      flexDirection: "row"
+    },
+
+    searchInput: {
+      flex: 1,
+      height: 50,
+      backgroundColor: "#fff",
+      color: "#333",
+      borderRadius: 25,
+      paddingHorizontal: 20,
+      fontSize: 16,
+      borderColor: "#8e4dff",
+      borderWidth: 1,
+      shadowColor: "#000",
+      shadowOpacity: 0.2,
+      shadowOffset: {
+        width: 4,
+        height: 4
+      },
+      elevation: 2 // android
+    },
+
+    loadButton: {
+      width: 50,
+      height: 50,
+      backgroundColor: "#8e4dff",
+      borderRadius: 25,
+      justifyContent: "center",
+      alignItems: "center",
+      marginLeft: 15
+    }
+  });
+
   return (
     <>
       <MapView
@@ -103,14 +173,14 @@ function Main({ navigation }) {
             <Image
               style={styles.avatar}
               source={{
-                uri: dev.avatar_url
+                uri: dev.avatarUrl
               }}
             />
             <Callout
               onPress={() => {
                 // navegação
                 navigation.navigate("Profile", {
-                  github_username: dev.github_username
+                  githubUsername: dev.githubUsername
                 });
               }}
             >
@@ -144,75 +214,5 @@ function Main({ navigation }) {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  map: {
-    flex: 1
-  },
-
-  avatar: {
-    width: 54,
-    height: 54,
-    borderRadius: 2,
-    borderWidth: 2,
-    borderColor: "#7d40e7"
-  },
-
-  callout: {
-    width: 260
-  },
-
-  devName: {
-    fontWeight: "bold",
-    fontSize: 16
-  },
-
-  devBio: {
-    color: "#666",
-    marginTop: 5
-  },
-
-  devTechs: {
-    marginTop: 5
-  },
-
-  searchForm: {
-    position: "absolute",
-    top: 20,
-    left: 20,
-    right: 20,
-    zIndex: 5,
-    flexDirection: "row"
-  },
-
-  searchInput: {
-    flex: 1,
-    height: 50,
-    backgroundColor: "#fff",
-    color: "#333",
-    borderRadius: 25,
-    paddingHorizontal: 20,
-    fontSize: 16,
-    borderColor: "#8e4dff",
-    borderWidth: 1,
-    shadowColor: "#000",
-    shadowOpacity: 0.2,
-    shadowOffset: {
-      width: 4,
-      height: 4
-    },
-    elevation: 2 // android
-  },
-
-  loadButton: {
-    width: 50,
-    height: 50,
-    backgroundColor: "#8e4dff",
-    borderRadius: 25,
-    justifyContent: "center",
-    alignItems: "center",
-    marginLeft: 15
-  }
-});
 
 export default Main;
