@@ -1,3 +1,8 @@
+# DevRadar
+
+Semana OmniStack 10 - Rocketseat
+
+<!--
 <img src="./static/omnistack.png" align="center"></img>
 <h1 align="center">Semana Omnistack 10</h1>
 <p align="center">Projeto <strong>DevRadar</strong> desenvolvido durante a Omnistack da Rocketseat</p>
@@ -68,3 +73,4 @@ Para testar a API do DevRadar, baixe e instale o [Insomnia](https://insomnia.res
 ## Licença
 
 [MIT](./LICENSE) &copy; [Rocketseat](https://rocketseat.com.br/)
+>
